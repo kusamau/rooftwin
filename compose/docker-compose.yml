@@ -1,0 +1,58 @@
+# rooftwin - base Compose file (minimal profile).
+#
+#   docker compose -f compose/docker-compose.yml up -d --wait           # broker only
+#   docker compose -f compose/docker-compose.yml --profile smoke up \
+#       --exit-code-from smoke-sub smoke-sub smoke-pub                  # pub/sub smoke test
+#
+# Later lessons add overlays (docker-compose.live.yml, .replay.yml, .full.yml) on top of this file.
+name: rooftwin
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2
+    restart: unless-stopped
+    ports:
+      # Loopback only: the broker is anonymous in Lesson 1 and must not be reachable from the LAN.
+      - "127.0.0.1:${MOSQUITTO_PORT:-1883}:1883"
+    volumes:
+      - ../ops/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - mosquitto-data:/mosquitto/data
+    healthcheck:
+      # $SYS messages are retained, so a fresh subscriber gets one immediately if the broker is up.
+      test: ["CMD", "mosquitto_sub", "-h", "localhost", "-t", "$$SYS/broker/uptime", "-C", "1", "-W", "3"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+  # --- Smoke test (profile "smoke") ---------------------------------------------------------------
+  # One-shot subscriber: waits for exactly one message on smoke/test, prints it, exits 0.
+  # Exits non-zero if nothing arrives within 30 s.
+  smoke-sub:
+    image: eclipse-mosquitto:2
+    profiles: ["smoke"]
+    depends_on:
+      mosquitto:
+        condition: service_healthy
+    command: ["mosquitto_sub", "-h", "mosquitto", "-t", "smoke/test", "-q", "1", "-C", "1", "-W", "30", "-v"]
+
+  # One-shot publisher: publishes "hello" a few times, so it does not matter which container
+  # finishes starting first (no retained message, so no stale "pass" from a previous run).
+  smoke-pub:
+    image: eclipse-mosquitto:2
+    profiles: ["smoke"]
+    depends_on:
+      mosquitto:
+        condition: service_healthy
+      smoke-sub:
+        condition: service_started
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        for i in 1 2 3 4 5; do
+          mosquitto_pub -h mosquitto -t smoke/test -q 1 -m "hello from rooftwin #$$i"
+          sleep 1
+        done
+
+volumes:
+  mosquitto-data:
