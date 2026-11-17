@@ -139,7 +139,35 @@ production forecast, which reaches into L3 for that one signal.
 ## 7. Open items carried forward
 
 1. PV module datasheet values (Voc, Isc, Vmp, Imp, module count, tilt, azimuth).
+
+| Parameter | Value |
+|---        |---    |
+| Model | Aiko Solar HiKu6 615W |
+| WpPeak  | 615   Wp |
+| Vmp | 44.98 V| 
+| Imp | 13.68 A |
+| Voc | 54.29 V |
+| Voc (8:00  17/11 cloudy, 5 degree) | 48.1  V|
+| Voc (9:30  17/11 sunny, 7 degree) | 53.0  V|
+| Voc (12:20 17/11 sunny, 10 degree) | 51.5  V|
+| Isc | 14.44 A |
+| cells | 144 |
+| T coef Voc | -0.22%/C |
+| tilt | 70 degree |
+| azimuth | 200 degree |
+
 2. Order of the batteries on the cable hop: which is nearest the take-off point.
+The 12V batteries
+a) 85 Ah Bosch S5 010 SLI starter (Jan 2022)
+b) 130 Ah SB HL500 Leisure DEEP CYCLE (Jan 2025)
+c) 44 Ah Bosch S4 Type 063 SLI starter (Jul 2020)
+are connected in parallel. The MTPP goes to a) then the cable hop to b) then c)
+
 3. Typical inverter usage pattern.
+Through the year recharges various devices (power banks, coffee machine, phones) while in summer supply power to laptops and monitors 
+
 4. Whether to configure the SmartShunt aux input as a battery temperature sensor.
+No battery temperature sensor available for now.
+
 5. Battery-bank main fuse (safety item, revisit at course closure).
+To Review later
