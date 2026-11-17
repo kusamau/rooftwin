@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: mvn verify (Java 21)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+
+      - name: Build, test, format and style checks
+        run: mvn -B -ntp verify
+
+  compose:
+    name: compose config + MQTT smoke test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate compose files
+        run: |
+          docker compose -f compose/docker-compose.yml config --quiet
+          docker compose -f compose/docker-compose.yml --profile smoke config --quiet
+
+      - name: Start broker and wait for healthy
+        run: docker compose -f compose/docker-compose.yml up -d --wait mosquitto
+
+      - name: Publish / subscribe round-trip
+        shell: bash
+        run: |
+          docker compose -f compose/docker-compose.yml --profile smoke \
+            up --exit-code-from smoke-sub smoke-sub smoke-pub | tee smoke.log
+          grep -q "smoke/test hello from rooftwin" smoke.log
+
+      - name: Broker logs
+        if: failure()
+        run: docker compose -f compose/docker-compose.yml logs mosquitto
+
+      - name: Tear down
+        if: always()
+        run: docker compose -f compose/docker-compose.yml --profile smoke down -v

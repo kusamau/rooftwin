@@ -1,0 +1,29 @@
+# Build output
+target/
+*.class
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# Local configuration and secrets
+compose/.env
+*.pem
+*.key
+
+# Recorded telemetry and replay sets stay local (small samples can be force-added)
+data/*
+!data/.gitkeep
+!data/samples/
+
+# Notebooks
+notebooks/.ipynb_checkpoints/
+
+# Misc
+smoke.log
+.DS_Store
+lessons
