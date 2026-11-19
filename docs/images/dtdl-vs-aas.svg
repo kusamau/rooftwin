@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B45309"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#047857"/>
+    </marker>
+    <style>
+      .h1 { font-size: 38px; font-weight: 700; fill: #111827; }
+      .sub { font-size: 20px; fill: #4B5563; }
+      .ph { font-size: 25px; font-weight: 700; }
+      .pq { font-size: 18px; fill: #4B5563; font-style: italic; }
+      .k { font-size: 16px; font-weight: 700; fill: #374151; letter-spacing: 0.5px; }
+      .c { font-size: 17px; fill: #111827; font-family: DejaVu Sans Mono, Menlo, monospace; }
+      .cs { font-size: 15px; fill: #4B5563; font-family: DejaVu Sans Mono, Menlo, monospace; }
+      .n { font-size: 17px; fill: #111827; }
+      .ns { font-size: 15px; fill: #4B5563; }
+      .bul { font-size: 18px; fill: #111827; }
+      .foot { font-size: 16px; fill: #6B7280; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+
+  <text x="60" y="68" class="h1">One charge controller, two information models</text>
+  <text x="60" y="104" class="sub">Victron SmartSolar MPPT 100/30 in rooftwin: DTDL v3 on the left, Asset Administration Shell (V3) on the right</text>
+
+  <!-- ============ DTDL panel ============ -->
+  <rect x="60" y="135" width="700" height="560" rx="14" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+  <text x="85" y="175" class="ph" fill="#1D4ED8">DTDL v3</text>
+  <text x="218" y="175" class="pq">what the twin does, at runtime</text>
+
+  <rect x="85" y="195" width="650" height="475" rx="10" fill="#FFFFFF" stroke="#93C5FD"/>
+  <text x="105" y="225" class="cs">Interface</text>
+  <text x="105" y="250" class="c">dtmi:io:github:kusamau:rooftwin:</text>
+  <text x="105" y="273" class="c">  MpptChargeController;1</text>
+
+  <text x="105" y="313" class="k">PROPERTY</text>
+  <text x="225" y="313" class="c">model, serial, maxPvVoltageV</text>
+  <rect x="220" y="323" width="300" height="30" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+  <text x="228" y="344" class="c">maxChargeCurrentA  [A]</text>
+
+  <text x="105" y="392" class="k">TELEMETRY</text>
+  <text x="225" y="392" class="c">pvPowerW [W]   batteryVoltageV [V]</text>
+  <text x="225" y="418" class="c">batteryCurrentA [A]   dailyEnergyKwh</text>
+  <text x="225" y="444" class="c">chargeStateCode {off, bulk, ...}</text>
+  <text x="225" y="470" class="cs">+ 4 more; units checked by the parser</text>
+
+  <text x="105" y="515" class="k">COMMAND</text>
+  <text x="225" y="515" class="c">resetDailyCounters()</text>
+
+  <text x="105" y="560" class="k">RELATION</text>
+  <text x="225" y="560" class="c">chargesInto → BatteryBank</text>
+
+  <text x="105" y="605" class="k">LINKED BY</text>
+  <text x="225" y="605" class="n">BatteryBank has 3 Battery Components;</text>
+  <text x="225" y="630" class="n">Site → hasMpptChargeController → this</text>
+  <text x="225" y="655" class="ns">One interface. No serial value, no maker, no type.</text>
+
+  <!-- ============ AAS panel ============ -->
+  <rect x="840" y="135" width="700" height="560" rx="14" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+  <text x="865" y="175" class="ph" fill="#047857">AAS V3</text>
+  <text x="975" y="175" class="pq">what the asset is, for anyone who receives it</text>
+
+  <!-- type shell -->
+  <rect x="865" y="195" width="650" height="62" rx="10" fill="#FFFFFF" stroke="#6EE7B7"/>
+  <text x="885" y="222" class="k">TYPE SHELL</text>
+  <text x="1015" y="222" class="c">SmartSolarMppt100_30_Type</text>
+  <text x="885" y="245" class="cs">assetKind: Type · ratings: 100 V, 30 A</text>
+
+  <line x1="1190" y1="295" x2="1190" y2="262" stroke="#047857" stroke-width="2" marker-end="url(#arrG)"/>
+  <text x="1202" y="284" class="cs">derivedFrom</text>
+
+  <!-- instance shell -->
+  <rect x="865" y="298" width="650" height="372" rx="10" fill="#FFFFFF" stroke="#6EE7B7"/>
+  <text x="885" y="326" class="k">INSTANCE SHELL</text>
+  <text x="1062" y="326" class="c">MpptChargeController</text>
+  <text x="885" y="350" class="cs">globalAssetId …/asset/victron/HQ223242XYT</text>
+
+  <rect x="885" y="365" width="610" height="118" rx="8" fill="#F0FDF4" stroke="#A7F3D0"/>
+  <text x="900" y="390" class="k">SUBMODEL Nameplate</text>
+  <text x="1125" y="390" class="ns">IDTA 02006-3-0</text>
+  <text x="900" y="417" class="c">ManufacturerName  "Victron Energy"</text>
+  <text x="900" y="442" class="c">SerialNumber      "HQ223242XYT"</text>
+  <text x="900" y="467" class="cs">semanticId 0112/2///61987#ABA951#009 (IEC CDD)</text>
+
+  <rect x="885" y="495" width="610" height="160" rx="8" fill="#F0FDF4" stroke="#A7F3D0"/>
+  <text x="900" y="520" class="k">SUBMODEL TechnicalData</text>
+  <text x="1150" y="520" class="ns">IDTA 02003</text>
+  <text x="900" y="547" class="c">MaxPvVoltage      100</text>
+  <rect x="895" y="557" width="300" height="30" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+  <text x="903" y="578" class="c">MaxChargeCurrent  30</text>
+  <text x="900" y="615" class="cs">semanticId → ConceptDescription</text>
+  <text x="900" y="638" class="cs">(IEC 61360: unit "A", definition, data type)</text>
+
+  <!-- shared concept arrow -->
+  <path d="M 522 338 C 700 338, 720 572, 893 572" fill="none" stroke="#B45309" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrA)" marker-start="url(#arrA)"/>
+  <rect x="610" y="440" width="190" height="56" rx="8" fill="#FFFFFF" stroke="#B45309"/>
+  <text x="705" y="463" class="n" text-anchor="middle" font-weight="700" fill="#B45309">same concept</text>
+  <text x="705" y="486" class="ns" text-anchor="middle">mapped by hand</text>
+
+  <!-- ============ bottom: what only each has ============ -->
+  <text x="60" y="745" class="k" fill="#1D4ED8">ONLY DTDL CAPTURES</text>
+  <text x="60" y="780" class="bul">• streams: telemetry with units and enums</text>
+  <text x="60" y="812" class="bul">• behaviour: commands, writable properties</text>
+  <text x="60" y="844" class="bul">• the graph: relationships, components</text>
+  <text x="60" y="876" class="bul">• a schema a runtime can validate messages against</text>
+
+  <text x="840" y="745" class="k" fill="#047857">ONLY AAS CAPTURES</text>
+  <text x="840" y="780" class="bul">• the facts: values, serial number, manufacturer</text>
+  <text x="840" y="812" class="bul">• type vs instance, linked by derivedFrom</text>
+  <text x="840" y="844" class="bul">• shared semantic IDs (IEC CDD / ECLASS)</text>
+  <text x="840" y="876" class="bul">• standard submodel templates other parties know</text>
+
+  <line x1="60" y1="920" x2="1540" y2="920" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="60" y="955" class="foot">rooftwin · Lesson 2 · models/dtdl/MpptChargeController.json · models/aas/Solar.json</text>
+  <text x="1540" y="955" class="foot" text-anchor="end">github.com/kusamau/rooftwin</text>
+</svg>

@@ -1,0 +1,95 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:io:github:kusamau:rooftwin:SolarArray;1",
+  "@type": "Interface",
+  "displayName": "Solar array",
+  "description": "The PV array as one electrical source. Nothing measures the array directly: every telemetry value here is either copied from the MPPT or estimated by the physics model (Lesson 5).",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "serial",
+      "displayName": "Serial number",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "model",
+      "displayName": "Module model",
+      "schema": "string"
+    },
+    {
+      "@type": ["Property", "Power"],
+      "name": "wpPeak",
+      "displayName": "Peak power (STC)",
+      "schema": "double",
+      "unit": "watt"
+    },
+    {
+      "@type": ["Property", "Angle"],
+      "name": "tiltDeg",
+      "displayName": "Tilt",
+      "description": "Angle between the module plane and horizontal: 0 = flat, 90 = vertical.",
+      "schema": "double",
+      "unit": "degreeOfArc"
+    },
+    {
+      "@type": ["Property", "Angle"],
+      "name": "azimuthDeg",
+      "displayName": "Azimuth",
+      "description": "Direction the module faces, as a compass bearing clockwise from north: 180 = due south.",
+      "schema": "double",
+      "unit": "degreeOfArc"
+    },
+    {
+      "@type": ["Telemetry", "Voltage"],
+      "name": "panelVoltageV",
+      "displayName": "Panel voltage",
+      "description": "Not in Victron Instant Readout; absent in live mode until a source exists.",
+      "schema": "double",
+      "unit": "volt"
+    },
+    {
+      "@type": ["Telemetry", "Current"],
+      "name": "panelCurrentA",
+      "displayName": "Panel current",
+      "description": "Not in Victron Instant Readout; absent in live mode until a source exists.",
+      "schema": "double",
+      "unit": "ampere"
+    },
+    {
+      "@type": ["Telemetry", "Power"],
+      "name": "powerW",
+      "displayName": "Array power",
+      "description": "Same physical quantity as MpptChargeController.pvPowerW, seen from the array's side.",
+      "schema": "double",
+      "unit": "watt"
+    },
+    {
+      "@type": ["Telemetry", "Irradiance"],
+      "name": "irradianceWm2",
+      "displayName": "Plane-of-array irradiance (derived)",
+      "description": "Derived, not measured: back-calculated from power and module temperature by the PV model.",
+      "schema": "double",
+      "unit": "wattPerSquareMetre"
+    },
+    {
+      "@type": ["Telemetry", "Temperature"],
+      "name": "moduleTempC",
+      "displayName": "Module temperature (estimated)",
+      "description": "Estimated from ambient temperature and irradiance until a sensor exists.",
+      "schema": "double",
+      "unit": "degreeCelsius"
+    },
+    {
+      "@type": "Relationship",
+      "name": "feeds",
+      "displayName": "feeds",
+      "description": "Electrical topology: the array is wired to this charge controller's PV input.",
+      "target": "dtmi:io:github:kusamau:rooftwin:MpptChargeController;1",
+      "maxMultiplicity": 1
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:io:github:kusamau:rooftwin:MpptChargeController;1",
+  "@type": "Interface",
+  "displayName": "MPPT charge controller",
+  "description": "Victron SmartSolar MPPT 100/30. Telemetry arrives over BLE Instant Readout (Lesson 3).",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "model",
+      "displayName": "Model",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "serial",
+      "displayName": "Serial number",
+      "schema": "string"
+    },
+    {
+      "@type": ["Property", "Voltage"],
+      "name": "maxPvVoltageV",
+      "displayName": "Maximum PV voltage",
+      "schema": "double",
+      "unit": "volt"
+    },
+    {
+      "@type": ["Property", "Current"],
+      "name": "maxChargeCurrentA",
+      "displayName": "Maximum charge current",
+      "description": "Sets the clipping ceiling: about 432 W at 14.4 V for the 100/30.",
+      "schema": "double",
+      "unit": "ampere"
+    },
+    {
+      "@type": ["Telemetry", "Voltage"],
+      "name": "pvVoltageV",
+      "displayName": "PV voltage",
+      "description": "Not in Instant Readout (VE.Direct only); absent in live mode.",
+      "schema": "double",
+      "unit": "volt"
+    },
+    {
+      "@type": ["Telemetry", "Current"],
+      "name": "pvCurrentA",
+      "displayName": "PV current",
+      "description": "Not in Instant Readout (VE.Direct only); absent in live mode.",
+      "schema": "double",
+      "unit": "ampere"
+    },
+    {
+      "@type": ["Telemetry", "Power"],
+      "name": "pvPowerW",
+      "displayName": "PV power",
+      "schema": "double",
+      "unit": "watt"
+    },
+    {
+      "@type": ["Telemetry", "Voltage"],
+      "name": "batteryVoltageV",
+      "displayName": "Battery voltage",
+      "description": "Independent bus-voltage reading #1 (#2 is SmartShunt.voltageV).",
+      "schema": "double",
+      "unit": "volt"
+    },
+    {
+      "@type": ["Telemetry", "Current"],
+      "name": "batteryCurrentA",
+      "displayName": "Charge current",
+      "schema": "double",
+      "unit": "ampere"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "chargeStateCode",
+      "displayName": "Charge state",
+      "description": "Victron charge-state code. Drives the battery model's mode (bulk, absorption, float).",
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "integer",
+        "enumValues": [
+          { "name": "off", "enumValue": 0 },
+          { "name": "fault", "enumValue": 2 },
+          { "name": "bulk", "enumValue": 3 },
+          { "name": "absorption", "enumValue": 4 },
+          { "name": "float", "enumValue": 5 },
+          { "name": "storage", "enumValue": 6 },
+          { "name": "equalize", "enumValue": 7 },
+          { "name": "startingUp", "enumValue": 245 },
+          { "name": "autoEqualize", "enumValue": 247 },
+          { "name": "externalControl", "enumValue": 252 }
+        ]
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "chargerErrorCode",
+      "displayName": "Charger error",
+      "description": "Victron charger error code; 0 means no error.",
+      "schema": "integer"
+    },
+    {
+      "@type": ["Telemetry", "Energy"],
+      "name": "dailyEnergyKwh",
+      "displayName": "Yield today",
+      "schema": "double",
+      "unit": "kilowattHour"
+    },
+    {
+      "@type": ["Telemetry", "Temperature"],
+      "name": "internalTempC",
+      "displayName": "Internal temperature",
+      "description": "Not in Instant Readout; absent in live mode.",
+      "schema": "double",
+      "unit": "degreeCelsius"
+    },
+    {
+      "@type": "Command",
+      "name": "resetDailyCounters",
+      "displayName": "Reset daily counters",
+      "description": "Declared so the model is complete. rooftwin never sends commands to the real controller (shadow mode); a policy decides who may invoke this (Lesson 9)."
+    },
+    {
+      "@type": "Relationship",
+      "name": "chargesInto",
+      "displayName": "charges into",
+      "description": "Electrical topology: battery output terminals wired to this bank.",
+      "target": "dtmi:io:github:kusamau:rooftwin:BatteryBank;1",
+      "maxMultiplicity": 1
+    }
+  ]
+}

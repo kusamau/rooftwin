@@ -1,0 +1,11 @@
+{
+  "name": "rooftwin-dtdl-validator",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Validates rooftwin's DTDL v3 models with Microsoft DTDLParser (WebAssembly build).",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@digicatapult/dtdl-parser": "1.1.120"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:io:github:kusamau:rooftwin:SmartShunt;1",
+  "@type": "Interface",
+  "displayName": "Battery monitor (SmartShunt)",
+  "description": "Victron SmartShunt on the shared battery negative. It sees the whole bank, never one battery. The aux input has no temperature sensor, so no battery temperature is modelled.",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "model",
+      "displayName": "Model",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "serial",
+      "displayName": "Serial number",
+      "schema": "string"
+    },
+    {
+      "@type": ["Property", "Current"],
+      "name": "shuntRatingA",
+      "displayName": "Shunt rating",
+      "schema": "double",
+      "unit": "ampere"
+    },
+    {
+      "@type": ["Telemetry", "Voltage"],
+      "name": "voltageV",
+      "displayName": "Bus voltage",
+      "description": "Independent bus-voltage reading #2 (#1 is MpptChargeController.batteryVoltageV).",
+      "schema": "double",
+      "unit": "volt"
+    },
+    {
+      "@type": ["Telemetry", "Current"],
+      "name": "currentA",
+      "displayName": "Bank current",
+      "description": "Signed: positive = charging, negative = discharging.",
+      "schema": "double",
+      "unit": "ampere"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "socPct",
+      "displayName": "State of charge",
+      "description": "Coulomb-counted, bank-level, in percent (0-100). No QuantitativeTypes semantic type fits a state of charge.",
+      "schema": "double"
+    },
+    {
+      "@type": ["Telemetry", "ElectricCharge"],
+      "name": "consumedAh",
+      "displayName": "Consumed charge",
+      "description": "Since the last full charge; zero or negative by Victron convention.",
+      "schema": "double",
+      "unit": "ampereHour"
+    },
+    {
+      "@type": ["Telemetry", "TimeSpan"],
+      "name": "timeToGoMin",
+      "displayName": "Time to go",
+      "schema": "double",
+      "unit": "minute"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "alarmFlags",
+      "displayName": "Alarm flags",
+      "description": "Victron alarm bit field (low voltage, high voltage, low SoC, ...). 0 means no alarm.",
+      "schema": "integer"
+    },
+    {
+      "@type": "Relationship",
+      "name": "measures",
+      "displayName": "measures",
+      "target": "dtmi:io:github:kusamau:rooftwin:BatteryBank;1",
+      "maxMultiplicity": 1
+    }
+  ]
+}

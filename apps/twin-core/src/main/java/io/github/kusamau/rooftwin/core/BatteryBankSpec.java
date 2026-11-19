@@ -4,9 +4,9 @@ package io.github.kusamau.rooftwin.core;
  * Static specification of a battery bank on the DC bus.
  *
  * <p>In Lesson 1 this is the aggregate view that the SmartShunt sees. The real bank is three
- * heterogeneous lead-acid batteries in parallel; Lesson 2 adds a per-battery sub-model so that each
- * battery keeps its own capacity, age and chemistry, and Lesson 5 gives each one its own
- * Thevenin-Shepherd parameters.
+ * heterogeneous lead-acid batteries in parallel. Lesson 2 models each one as a {@code Battery}
+ * Component of the DTDL {@code BatteryBank} (own capacity, age, chemistry, construction, position
+ * on the cable hop), and Lesson 5 gives each one its own Thevenin-Shepherd parameters.
  *
  * @param id stable identifier (e.g. {@code "battery-bank"})
  * @param chemistry cell chemistry; must be consistent with {@code nominalVoltage}

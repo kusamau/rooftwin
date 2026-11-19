@@ -1,0 +1,56 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:io:github:kusamau:rooftwin:Site;1",
+  "@type": "Interface",
+  "displayName": "Site",
+  "description": "The installation as a whole: where it is and which assets it contains. The root of the twin graph.",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "location",
+      "displayName": "Location",
+      "description": "GeoJSON Point. Coordinates are [longitude, latitude] (RFC 7946). Keep it coarse in public data: two decimals (~1 km) are enough for sun position.",
+      "schema": "point"
+    },
+    {
+      "@type": "Property",
+      "name": "timezone",
+      "displayName": "Time zone",
+      "description": "IANA time zone identifier, e.g. Europe/London. Needed to turn UTC telemetry into solar time.",
+      "schema": "string"
+    },
+    {
+      "@type": "Relationship",
+      "name": "hasSolarArray",
+      "displayName": "has solar array",
+      "target": "dtmi:io:github:kusamau:rooftwin:SolarArray;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "hasMpptChargeController",
+      "displayName": "has MPPT charge controller",
+      "target": "dtmi:io:github:kusamau:rooftwin:MpptChargeController;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "hasSmartShunt",
+      "displayName": "has battery monitor",
+      "target": "dtmi:io:github:kusamau:rooftwin:SmartShunt;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "hasBatteryBank",
+      "displayName": "has battery bank",
+      "target": "dtmi:io:github:kusamau:rooftwin:BatteryBank;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "hasInverter",
+      "displayName": "has inverter",
+      "target": "dtmi:io:github:kusamau:rooftwin:Inverter;1"
+    }
+  ]
+}

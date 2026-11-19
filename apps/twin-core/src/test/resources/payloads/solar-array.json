@@ -1,0 +1,8 @@
+{
+  "$model": "dtmi:io:github:kusamau:rooftwin:SolarArray;1",
+  "twinId": "pv-array-1",
+  "observedAt": "2026-06-21T11:30:00Z",
+  "powerW": 447.0,
+  "irradianceWm2": 905.0,
+  "moduleTempC": 47.5
+}

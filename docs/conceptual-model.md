@@ -10,10 +10,10 @@ A small off-grid PV system on a residential roof:
 
 | Element | Detail | Observable? |
 |---|---|---|
-| PV array | ~500 Wp, exact module data still to be measured | Indirectly: PV power via the MPPT |
+| PV array | One 615 Wp module (datasheet values in §7), tilt 70°, azimuth 200° | Indirectly: PV power via the MPPT |
 | MPPT charge controller | Victron SmartSolar MPPT 100/30 (100 V PV max, 30 A charge) | Yes, BLE Instant Readout |
 | Battery monitor | Victron SmartShunt on the bank negative | Yes, BLE Instant Readout |
-| Battery bank | 3 lead-acid batteries in parallel, 12 V bus, cable-hop wiring:<br>(a) 130 Ah leisure deep-cycle, 2025 · (b) SLI starter, 2022 · (c) SLI starter, 2020 | Bank-level only (one shunt for all three) |
+| Battery bank | 3 lead-acid batteries in parallel, 12 V bus, cable-hop wiring:<br>(a) 85 Ah SLI starter, 2022 · (b) 130 Ah leisure deep-cycle, 2025 · (c) 44 Ah SLI starter, 2020; a is nearest the take-off | Bank-level only (one shunt for all three) |
 | Inverter | 300 W pure-sine, 12 V DC → 230 V AC, on its own DC breaker | No telemetry; on/off state entered by hand |
 | Protection | Three 50 A DC breakers; no battery main fuse (logged, revisit at course closure) | No |
 | Environment | Sun position, irradiance, ambient/cell temperature | Sun position computable; weather via API (Lesson 6) |
@@ -92,11 +92,11 @@ reject physically impossible values: Vmp ≥ Voc, a nameplate power that Vmp × 
 
 - `MpptSpec.acceptsArray(...)` — cold mornings raise Voc. The PV voltage limit must hold at the
   coldest expected cell temperature, not at STC.
-- `MpptSpec.maxOutputPowerW(...)` — at 14.4 V the 100/30 delivers at most 432 W. With ~500 Wp of
-  panels, clipping on clear summer days is a design property, not an anomaly.
+- `MpptSpec.maxOutputPowerW(...)` — at 14.4 V the 100/30 delivers at most 432 W. With a 615 Wp
+  module, clipping on clear days is a design property, not an anomaly.
 
-The PV values in the tests are **illustrative** (two 250 W, 60-cell modules in parallel). Replace
-them with real datasheet values once measured.
+`RealArrayTest` holds the real module's datasheet values and checks them against a measured Voc.
+Lesson 2 adds the information model on top: see `information-model.md`.
 
 ## 5. Model, shadow or twin? (Kritzinger et al.)
 
@@ -123,7 +123,7 @@ The most widely referenced leveling scheme is AWS's four-level **Digital Twin Le
 
 | Level | Name | Meaning | rooftwin |
 |---|---|---|---|
-| L1 | Descriptive | Structure, components, relationships | Lesson 1–2 (specs, DTDL, AAS) |
+| L1 | Descriptive | Structure, components, relationships | Lesson 1–2 (specs, DTDL, AAS) ✅ |
 | L2 | Informative | Live state from sensors, alarms | Lesson 3–4, 7 |
 | L3 | Predictive | Pre-trained/static models predict behaviour | Lesson 5–6 (physics + forecasts) |
 | L4 | Living | Model parameters keep updating from real data | Lesson 5–6 (calibration, SoH re-estimation) |
@@ -156,7 +156,7 @@ production forecast, which reaches into L3 for that one signal.
 | tilt | 70 degree |
 | azimuth | 200 degree |
 
-2. Order of the batteries on the cable hop: which is nearest the take-off point.
+2. Order of the batteries on the cable hop: which is nearest the take-off point. *(Closed in Lesson 2: slots a/b/c in the models follow this order.)*
 The 12V batteries
 a) 85 Ah Bosch S5 010 SLI starter (Jan 2022)
 b) 130 Ah SB HL500 Leisure DEEP CYCLE (Jan 2025)
@@ -166,7 +166,7 @@ are connected in parallel. The MTPP goes to a) then the cable hop to b) then c)
 3. Typical inverter usage pattern.
 Through the year recharges various devices (power banks, coffee machine, phones) while in summer supply power to laptops and monitors 
 
-4. Whether to configure the SmartShunt aux input as a battery temperature sensor.
+4. Whether to configure the SmartShunt aux input as a battery temperature sensor. *(Closed in Lesson 2: no `temperatureC` in the model.)*
 No battery temperature sensor available for now.
 
 5. Battery-bank main fuse (safety item, revisit at course closure).

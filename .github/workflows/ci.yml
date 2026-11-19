@@ -29,6 +29,26 @@ jobs:
       - name: Build, test, format and style checks
         run: mvn -B -ntp verify
 
+  models:
+    name: DTDL + AAS validation (containers)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build validators
+        run: |
+          docker build -t dtdl-validator docker/dtdl-validator
+          docker build -t aas-validator docker/aas-validator
+
+      - name: DTDL v3 (Microsoft DTDLParser) + relationship targets
+        run: docker run --rm -v "$PWD/models/dtdl:/w:ro" dtdl-validator /w
+
+      - name: Solar.json is generated from generate_solar_aas.py
+        run: python3 models/aas/generate_solar_aas.py --check
+
+      - name: AAS metamodel V3.0 / V3.1 + referential integrity
+        run: docker run --rm -v "$PWD/models/aas:/w:ro" aas-validator /w/Solar.json
+
   compose:
     name: compose config + MQTT smoke test
     runs-on: ubuntu-latest

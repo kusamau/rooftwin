@@ -1,0 +1,5 @@
+{
+  "$model": "dtmi:io:github:kusamau:rooftwin:BatteryBank;1",
+  "twinId": "battery-bank",
+  "observedAt": "2026-11-19T12:00:00Z"
+}

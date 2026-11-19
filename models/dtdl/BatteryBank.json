@@ -1,0 +1,80 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:io:github:kusamau:rooftwin:BatteryBank;1",
+  "@type": "Interface",
+  "displayName": "Battery bank",
+  "description": "Three heterogeneous lead-acid batteries in parallel. Modeled as an aggregate with one Component per battery, so per-battery state can be exposed once Lesson 6 can infer it.",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "topology",
+      "displayName": "Topology",
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "string",
+        "enumValues": [
+          { "name": "parallel", "enumValue": "parallel" },
+          { "name": "series", "enumValue": "series" }
+        ]
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "cabling",
+      "displayName": "Cabling",
+      "description": "cable-hop: post-to-post links, so the battery nearest the take-off sees the lowest cable resistance.",
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "string",
+        "enumValues": [
+          { "name": "cableHop", "enumValue": "cable-hop" },
+          { "name": "busbar", "enumValue": "busbar" },
+          { "name": "diagonal", "enumValue": "diagonal" }
+        ]
+      }
+    },
+    {
+      "@type": ["Property", "Voltage"],
+      "name": "nominalVoltageV",
+      "displayName": "Nominal voltage",
+      "schema": "double",
+      "unit": "volt"
+    },
+    {
+      "@type": "Component",
+      "name": "battery_a",
+      "displayName": "Battery A",
+      "schema": "dtmi:io:github:kusamau:rooftwin:Battery;1"
+    },
+    {
+      "@type": "Component",
+      "name": "battery_b",
+      "displayName": "Battery B",
+      "schema": "dtmi:io:github:kusamau:rooftwin:Battery;1"
+    },
+    {
+      "@type": "Component",
+      "name": "battery_c",
+      "displayName": "Battery C",
+      "schema": "dtmi:io:github:kusamau:rooftwin:Battery;1"
+    },
+    {
+      "@type": ["Telemetry", "ElectricCharge"],
+      "name": "effectiveCapacityAhEstimated",
+      "displayName": "Effective capacity (estimated)",
+      "description": "Estimated usable capacity of the bank as a whole. Lower than the sum of nameplates: the weakest battery limits it.",
+      "schema": "double",
+      "unit": "ampereHour"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "healthIndex",
+      "displayName": "Health index",
+      "description": "0 = end of life, 1 = as new. Defined in Lesson 6.",
+      "schema": "double"
+    }
+  ]
+}

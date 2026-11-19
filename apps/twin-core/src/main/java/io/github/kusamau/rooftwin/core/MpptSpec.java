@@ -25,7 +25,7 @@ public record MpptSpec(String model, double maxPvVoltage, double maxChargeCurren
    * Maximum power the controller can push into the battery at a given battery voltage. Anything the
    * array could produce above this is clipped.
    *
-   * <p>For the 100/30 at a 14.4 V absorption voltage that is 432 W, less than a 500 Wp array's
+   * <p>For the 100/30 at a 14.4 V absorption voltage that is 432 W, less than the 615 Wp module's
    * nameplate. On the best days the twin should expect a flat top at ~30 A, not a fault.
    *
    * @param batteryVoltage battery terminal voltage, in volts
