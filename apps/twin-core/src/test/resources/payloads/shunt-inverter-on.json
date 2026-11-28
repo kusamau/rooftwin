@@ -1,0 +1,11 @@
+{
+  "$model": "dtmi:io:github:kusamau:rooftwin:SmartShunt;1",
+  "twinId": "shunt-1",
+  "observedAt": "2026-11-19T19:42:10Z",
+  "voltageV": 12.21,
+  "currentA": -27.4,
+  "socPct": 81.5,
+  "consumedAh": -24.6,
+  "timeToGoMin": 236.0,
+  "alarmFlags": 0
+}

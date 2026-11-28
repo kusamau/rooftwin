@@ -1,0 +1,10 @@
+{
+  "id": "site-1",
+  "location": { "type": "Point", "coordinates": [-0.01, 51.48] },
+  "timezone": "Europe/London",
+  "hasSolarArray": "pv-array-1",
+  "hasMpptChargeController": "mppt-1",
+  "hasSmartShunt": "shunt-1",
+  "hasBatteryBank": "battery-bank",
+  "hasInverter": "inverter-1"
+}

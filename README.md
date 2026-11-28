@@ -2,8 +2,8 @@
 
 A simple digital twin for a simple home solar system.
 
-`rooftwin` is a **learning-grade** digital twin of a real, small off-grid PV installation: ~500 Wp of
-panels, a Victron SmartSolar MPPT 100/30, a Victron SmartShunt, three mismatched lead-acid batteries
+`rooftwin` is a **learning-grade** digital twin of a real, small off-grid PV installation: a 615 Wp
+panel, a Victron SmartSolar MPPT 100/30, a Victron SmartShunt, three mismatched lead-acid batteries
 in parallel and a 300 W inverter. It is built in public, one step per week, as part of a 10-week
 personal deep dive into digital twin technology.
 
@@ -17,8 +17,8 @@ prescriptive loops, security and operations.
 
 | Lesson | Topic | State |
 |---|---|---|
-| 1 | Foundations, repo skeleton, MQTT smoke test | ✅ this commit |
-| 2 | Information models (DTDL v3, AAS) | planned |
+| 1 | Foundations, repo skeleton, MQTT smoke test | ✅ |
+| 2 | Information models (DTDL v3, AAS), validators, Java mirror | ✅ this commit |
 | 3 | BLE → MQTT bridge, replay mode | planned |
 | 4 | Eclipse Ditto + InfluxDB | planned |
 | 5 | Physics models and calibration | planned |
@@ -43,7 +43,15 @@ docker compose -f compose/docker-compose.yml up -d --wait
 
 # Smoke test: one message published and received on smoke/test
 smoke/run-smoke.sh
+
+# Validate the information models (DTDL v3 + AAS) in containers, as CI does
+ops/scripts/validate-models.sh
 ```
+
+The information model is described in [`docs/information-model.md`](docs/information-model.md);
+why DTDL, AAS and Ditto each have a role is in [`docs/architecture-choice.md`](docs/architecture-choice.md).
+
+![The same MPPT in DTDL and AAS](docs/images/dtdl-vs-aas.png)
 
 If formatting fails the build, run `mvn spotless:apply` (or `ops/scripts/mvn-docker.sh spotless:apply`).
 
@@ -53,8 +61,8 @@ If formatting fails the build, run `mvn spotless:apply` (or `ops/scripts/mvn-doc
 apps/            Java modules: twin-core (domain model), twin-api, twin-physics,
                  twin-analytics, twin-ui-backend
 compose/         docker-compose.yml (+ profile overlays from Lesson 3)
-docker/          Dockerfiles for non-Java containers (BLE bridge, replay simulator)
-models/          DTDL, AAS, ONNX
+docker/          Dockerfiles for non-Java containers (model validators; BLE bridge and replay from L3)
+models/          DTDL v3 interfaces, AAS environment (+ generator); ONNX from L6
 notebooks/       Jupyter notebooks (training only)
 data/            Recorded telemetry and replay sets (gitignored)
 ops/             Mosquitto config, scripts; later Grafana, OPA, PKI, Helm

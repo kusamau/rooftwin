@@ -1,0 +1,14 @@
+{
+  "$model": "dtmi:io:github:kusamau:rooftwin:MpptChargeController;1",
+  "twinId": "mppt-1",
+  "observedAt": "2026-11-19T08:05:00Z",
+  "pvVoltageV": 31.5,
+  "pvCurrentA": 0.2,
+  "pvPowerW": 6.0,
+  "batteryVoltageV": 12.61,
+  "batteryCurrentA": 0.4,
+  "chargeStateCode": 99,
+  "chargerErrorCode": 0,
+  "dailyEnergyKwh": 0.0,
+  "internalTempC": 9.5
+}

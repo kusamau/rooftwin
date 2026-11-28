@@ -1,0 +1,8 @@
+{
+  "$model": "dtmi:io:github:kusamau:rooftwin:Battery;1",
+  "twinId": "battery-bank",
+  "component": "battery_c",
+  "observedAt": "2026-11-19T12:00:00Z",
+  "relativeHealthDelta": -0.18,
+  "estimatedEsrMilliOhm": 14.5
+}

@@ -13,9 +13,23 @@
 
   <artifactId>twin-core</artifactId>
   <name>twin-core</name>
-  <description>Shared domain model: static specifications of the physical assets (no framework dependencies).</description>
+  <description>Shared domain model: static specifications of the physical assets, and the Java mirror of the DTDL information model. Depends on Jackson only.</description>
 
   <dependencies>
+    <!-- JSON form of telemetry, commands and the site (io.github.kusamau.rooftwin.core.model). -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.datatype</groupId>
+      <artifactId>jackson-datatype-jsr310</artifactId>
+    </dependency>
+
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>

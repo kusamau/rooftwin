@@ -1,0 +1,3048 @@
+{
+  "assetAdministrationShells": [
+    {
+      "modelType": "AssetAdministrationShell",
+      "id": "https://github.com/kusamau/rooftwin/ids/aas/mppt-type",
+      "idShort": "SmartSolarMppt100_30_Type",
+      "assetInformation": {
+        "assetKind": "Type",
+        "globalAssetId": "https://github.com/kusamau/rooftwin/ids/asset/type/victron/smartsolar-mppt-100-30"
+      },
+      "submodels": [
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/mppt-type/nameplate"
+            }
+          ]
+        },
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/mppt-type/technicaldata"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "AssetAdministrationShell",
+      "id": "https://github.com/kusamau/rooftwin/ids/aas/mppt",
+      "idShort": "MpptChargeController",
+      "assetInformation": {
+        "assetKind": "Instance",
+        "globalAssetId": "https://github.com/kusamau/rooftwin/ids/asset/victron/HQ223242XYT"
+      },
+      "submodels": [
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/mppt/nameplate"
+            }
+          ]
+        },
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/mppt/technicaldata"
+            }
+          ]
+        }
+      ],
+      "derivedFrom": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "AssetAdministrationShell",
+            "value": "https://github.com/kusamau/rooftwin/ids/aas/mppt-type"
+          }
+        ]
+      }
+    },
+    {
+      "modelType": "AssetAdministrationShell",
+      "id": "https://github.com/kusamau/rooftwin/ids/aas/shunt",
+      "idShort": "SmartShunt",
+      "assetInformation": {
+        "assetKind": "Instance",
+        "globalAssetId": "https://github.com/kusamau/rooftwin/ids/asset/victron/HQ2435GMKJX"
+      },
+      "submodels": [
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/shunt/nameplate"
+            }
+          ]
+        },
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/shunt/technicaldata"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "AssetAdministrationShell",
+      "id": "https://github.com/kusamau/rooftwin/ids/aas/pv",
+      "idShort": "SolarArray",
+      "assetInformation": {
+        "assetKind": "Instance",
+        "globalAssetId": "https://github.com/kusamau/rooftwin/ids/asset/pv-array-1"
+      },
+      "submodels": [
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/pv/nameplate"
+            }
+          ]
+        },
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/pv/technicaldata"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "AssetAdministrationShell",
+      "id": "https://github.com/kusamau/rooftwin/ids/aas/battery-a",
+      "idShort": "Battery_A",
+      "assetInformation": {
+        "assetKind": "Instance",
+        "globalAssetId": "https://github.com/kusamau/rooftwin/ids/asset/battery/a"
+      },
+      "submodels": [
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/battery-a/nameplate"
+            }
+          ]
+        },
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/battery-a/technicaldata"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "AssetAdministrationShell",
+      "id": "https://github.com/kusamau/rooftwin/ids/aas/battery-b",
+      "idShort": "Battery_B",
+      "assetInformation": {
+        "assetKind": "Instance",
+        "globalAssetId": "https://github.com/kusamau/rooftwin/ids/asset/battery/b"
+      },
+      "submodels": [
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/battery-b/nameplate"
+            }
+          ]
+        },
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/battery-b/technicaldata"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "AssetAdministrationShell",
+      "id": "https://github.com/kusamau/rooftwin/ids/aas/battery-c",
+      "idShort": "Battery_C",
+      "assetInformation": {
+        "assetKind": "Instance",
+        "globalAssetId": "https://github.com/kusamau/rooftwin/ids/asset/battery/c"
+      },
+      "submodels": [
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/battery-c/nameplate"
+            }
+          ]
+        },
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/battery-c/technicaldata"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "AssetAdministrationShell",
+      "id": "https://github.com/kusamau/rooftwin/ids/aas/bank",
+      "idShort": "BatteryBank",
+      "assetInformation": {
+        "assetKind": "Instance",
+        "globalAssetId": "https://github.com/kusamau/rooftwin/ids/asset/battery-bank"
+      },
+      "submodels": [
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/bank/technicaldata"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "AssetAdministrationShell",
+      "id": "https://github.com/kusamau/rooftwin/ids/aas/inverter",
+      "idShort": "Inverter",
+      "assetInformation": {
+        "assetKind": "Instance",
+        "globalAssetId": "https://github.com/kusamau/rooftwin/ids/asset/inverter-1"
+      },
+      "submodels": [
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/inverter/nameplate"
+            }
+          ]
+        },
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://github.com/kusamau/rooftwin/ids/sm/inverter/technicaldata"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "submodels": [
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/mppt-type/nameplate",
+      "idShort": "Nameplate",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/idta/nameplate/3/0/Nameplate"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerName",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA565#009"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "Victron Energy"
+            }
+          ]
+        },
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerProductDesignation",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA567#009"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "SmartSolar MPPT 100/30"
+            }
+          ]
+        },
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerProductFamily",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABP464#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "SmartSolar MPPT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/mppt-type/technicaldata",
+      "idShort": "TechnicalData",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "0173-1#01-AHX837#002"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "GeneralInformation",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK161#002/0173-1#01-AHX838#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "ManufacturerName",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-AAO677#004"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "Victron Energy"
+            },
+            {
+              "modelType": "MultiLanguageProperty",
+              "idShort": "ManufacturerProductDesignation",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-AAW338#003"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "language": "en",
+                  "text": "SmartSolar MPPT 100/30"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementList",
+          "idShort": "TechnicalPropertyAreas",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK163#002"
+              }
+            ]
+          },
+          "typeValueListElement": "SubmodelElementCollection",
+          "semanticIdListElement": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "SubmodelElementCollection",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "MaxPvVoltage",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/MaxPvVoltage"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "100"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "MaxChargeCurrent",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/MaxChargeCurrent"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "30"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "NominalVoltage",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/NominalVoltage"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "12"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/mppt/nameplate",
+      "idShort": "Nameplate",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/idta/nameplate/3/0/Nameplate"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerName",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA565#009"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "Victron Energy"
+            }
+          ]
+        },
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerProductDesignation",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA567#009"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "SmartSolar MPPT 100/30"
+            }
+          ]
+        },
+        {
+          "modelType": "Property",
+          "idShort": "SerialNumber",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA951#009"
+              }
+            ]
+          },
+          "valueType": "xs:string",
+          "value": "HQ223242XYT"
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/mppt/technicaldata",
+      "idShort": "TechnicalData",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "0173-1#01-AHX837#002"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "GeneralInformation",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK161#002/0173-1#01-AHX838#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "ManufacturerName",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-AAO677#004"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "Victron Energy"
+            },
+            {
+              "modelType": "MultiLanguageProperty",
+              "idShort": "ManufacturerProductDesignation",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-AAW338#003"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "language": "en",
+                  "text": "SmartSolar MPPT 100/30"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementList",
+          "idShort": "TechnicalPropertyAreas",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK163#002"
+              }
+            ]
+          },
+          "typeValueListElement": "SubmodelElementCollection",
+          "semanticIdListElement": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "SubmodelElementCollection",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "MaxPvVoltage",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/MaxPvVoltage"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "100"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "MaxChargeCurrent",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/MaxChargeCurrent"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "30"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "NominalVoltage",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/NominalVoltage"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "12"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/shunt/nameplate",
+      "idShort": "Nameplate",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/idta/nameplate/3/0/Nameplate"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerName",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA565#009"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "Victron Energy"
+            }
+          ]
+        },
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerProductDesignation",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA567#009"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "SmartShunt"
+            }
+          ]
+        },
+        {
+          "modelType": "Property",
+          "idShort": "SerialNumber",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA951#009"
+              }
+            ]
+          },
+          "valueType": "xs:string",
+          "value": "HQ2435GMKJX"
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/shunt/technicaldata",
+      "idShort": "TechnicalData",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "0173-1#01-AHX837#002"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "GeneralInformation",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK161#002/0173-1#01-AHX838#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "ManufacturerName",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-AAO677#004"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "Victron Energy"
+            },
+            {
+              "modelType": "MultiLanguageProperty",
+              "idShort": "ManufacturerProductDesignation",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-AAW338#003"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "language": "en",
+                  "text": "SmartShunt"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementList",
+          "idShort": "TechnicalPropertyAreas",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK163#002"
+              }
+            ]
+          },
+          "typeValueListElement": "SubmodelElementCollection",
+          "semanticIdListElement": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "SubmodelElementCollection",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "ShuntRating",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/ShuntRating"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/pv/nameplate",
+      "idShort": "Nameplate",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/idta/nameplate/3/0/Nameplate"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerName",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA565#009"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "Aiko Solar"
+            }
+          ]
+        },
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerProductDesignation",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA567#009"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "Aiko Solar HiKu6 615W"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/pv/technicaldata",
+      "idShort": "TechnicalData",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "0173-1#01-AHX837#002"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "GeneralInformation",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK161#002/0173-1#01-AHX838#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "ManufacturerName",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-AAO677#004"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "Aiko Solar"
+            },
+            {
+              "modelType": "MultiLanguageProperty",
+              "idShort": "ManufacturerProductDesignation",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-AAW338#003"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "language": "en",
+                  "text": "Aiko Solar HiKu6 615W"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementList",
+          "idShort": "TechnicalPropertyAreas",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK163#002"
+              }
+            ]
+          },
+          "typeValueListElement": "SubmodelElementCollection",
+          "semanticIdListElement": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "SubmodelElementCollection",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "PeakPower",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/PeakPower"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "615"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "VoltageAtMaxPower",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/VoltageAtMaxPower"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "44.98"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "CurrentAtMaxPower",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/CurrentAtMaxPower"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "13.68"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "OpenCircuitVoltage",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/OpenCircuitVoltage"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "54.29"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "ShortCircuitCurrent",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/ShortCircuitCurrent"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "14.44"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "CellsInSeries",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/CellsInSeries"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:int",
+                  "value": "144"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "Tilt",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/Tilt"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "70"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "Azimuth",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/Azimuth"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "200"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/battery-a/nameplate",
+      "idShort": "Nameplate",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/idta/nameplate/3/0/Nameplate"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerName",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA565#009"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "Bosch"
+            }
+          ]
+        },
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerProductDesignation",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA567#009"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "S5 010"
+            }
+          ]
+        },
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerProductFamily",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABP464#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "S5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/battery-a/technicaldata",
+      "idShort": "TechnicalData",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "0173-1#01-AHX837#002"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "GeneralInformation",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK161#002/0173-1#01-AHX838#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "ManufacturerName",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-AAO677#004"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "Bosch"
+            },
+            {
+              "modelType": "MultiLanguageProperty",
+              "idShort": "ManufacturerProductDesignation",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-AAW338#003"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "language": "en",
+                  "text": "S5 010"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementList",
+          "idShort": "TechnicalPropertyAreas",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK163#002"
+              }
+            ]
+          },
+          "typeValueListElement": "SubmodelElementCollection",
+          "semanticIdListElement": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "SubmodelElementCollection",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "NominalVoltage",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/NominalVoltage"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "12"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "NominalCapacity",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/NominalCapacity"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "85"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "Chemistry",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/Chemistry"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:string",
+                  "value": "LEAD_ACID_FLOODED"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "Construction",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/Construction"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:string",
+                  "value": "SLI"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "InstalledOn",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/InstalledOn"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:gYearMonth",
+                  "value": "2022-01"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "HopPosition",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/HopPosition"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:string",
+                  "value": "closest-to-bus"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/battery-b/nameplate",
+      "idShort": "Nameplate",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/idta/nameplate/3/0/Nameplate"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerName",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA565#009"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "SB"
+            }
+          ]
+        },
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerProductDesignation",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA567#009"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "HL500 Leisure Deep Cycle 12 V 130 Ah"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/battery-b/technicaldata",
+      "idShort": "TechnicalData",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "0173-1#01-AHX837#002"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "GeneralInformation",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK161#002/0173-1#01-AHX838#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "ManufacturerName",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-AAO677#004"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "SB"
+            },
+            {
+              "modelType": "MultiLanguageProperty",
+              "idShort": "ManufacturerProductDesignation",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-AAW338#003"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "language": "en",
+                  "text": "HL500 Leisure Deep Cycle 12 V 130 Ah"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementList",
+          "idShort": "TechnicalPropertyAreas",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK163#002"
+              }
+            ]
+          },
+          "typeValueListElement": "SubmodelElementCollection",
+          "semanticIdListElement": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "SubmodelElementCollection",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "NominalVoltage",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/NominalVoltage"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "12"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "NominalCapacity",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/NominalCapacity"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "130"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "Chemistry",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/Chemistry"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:string",
+                  "value": "LEAD_ACID_FLOODED"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "Construction",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/Construction"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:string",
+                  "value": "deep-cycle"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "InstalledOn",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/InstalledOn"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:gYearMonth",
+                  "value": "2025-01"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "HopPosition",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/HopPosition"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:string",
+                  "value": "middle"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/battery-c/nameplate",
+      "idShort": "Nameplate",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/idta/nameplate/3/0/Nameplate"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerName",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA565#009"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "Bosch"
+            }
+          ]
+        },
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerProductDesignation",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA567#009"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "S4 (UK type 063)"
+            }
+          ]
+        },
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerProductFamily",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABP464#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "S4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/battery-c/technicaldata",
+      "idShort": "TechnicalData",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "0173-1#01-AHX837#002"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "GeneralInformation",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK161#002/0173-1#01-AHX838#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "ManufacturerName",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-AAO677#004"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "Bosch"
+            },
+            {
+              "modelType": "MultiLanguageProperty",
+              "idShort": "ManufacturerProductDesignation",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-AAW338#003"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "language": "en",
+                  "text": "S4 (UK type 063)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementList",
+          "idShort": "TechnicalPropertyAreas",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK163#002"
+              }
+            ]
+          },
+          "typeValueListElement": "SubmodelElementCollection",
+          "semanticIdListElement": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "SubmodelElementCollection",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "NominalVoltage",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/NominalVoltage"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "12"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "NominalCapacity",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/NominalCapacity"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "44"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "Chemistry",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/Chemistry"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:string",
+                  "value": "LEAD_ACID_FLOODED"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "Construction",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/Construction"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:string",
+                  "value": "SLI"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "InstalledOn",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/InstalledOn"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:gYearMonth",
+                  "value": "2020-07"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "HopPosition",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/HopPosition"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:string",
+                  "value": "farthest-from-bus"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/bank/technicaldata",
+      "idShort": "TechnicalData",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "0173-1#01-AHX837#002"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "SubmodelElementList",
+          "idShort": "TechnicalPropertyAreas",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK163#002"
+              }
+            ]
+          },
+          "typeValueListElement": "SubmodelElementCollection",
+          "semanticIdListElement": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "SubmodelElementCollection",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "NominalVoltage",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/NominalVoltage"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "12"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "Topology",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/Topology"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:string",
+                  "value": "parallel"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "Cabling",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/Cabling"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:string",
+                  "value": "cable-hop"
+                },
+                {
+                  "modelType": "SubmodelElementList",
+                  "idShort": "Batteries",
+                  "orderRelevant": true,
+                  "typeValueListElement": "ReferenceElement",
+                  "value": [
+                    {
+                      "modelType": "ReferenceElement",
+                      "value": {
+                        "type": "ModelReference",
+                        "keys": [
+                          {
+                            "type": "AssetAdministrationShell",
+                            "value": "https://github.com/kusamau/rooftwin/ids/aas/battery-a"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": "ReferenceElement",
+                      "value": {
+                        "type": "ModelReference",
+                        "keys": [
+                          {
+                            "type": "AssetAdministrationShell",
+                            "value": "https://github.com/kusamau/rooftwin/ids/aas/battery-b"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": "ReferenceElement",
+                      "value": {
+                        "type": "ModelReference",
+                        "keys": [
+                          {
+                            "type": "AssetAdministrationShell",
+                            "value": "https://github.com/kusamau/rooftwin/ids/aas/battery-c"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/inverter/nameplate",
+      "idShort": "Nameplate",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/idta/nameplate/3/0/Nameplate"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerName",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA565#009"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "BESTEK"
+            }
+          ]
+        },
+        {
+          "modelType": "MultiLanguageProperty",
+          "idShort": "ManufacturerProductDesignation",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0112/2///61987#ABA567#009"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "300 W pure-sine inverter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "id": "https://github.com/kusamau/rooftwin/ids/sm/inverter/technicaldata",
+      "idShort": "TechnicalData",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "0173-1#01-AHX837#002"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "GeneralInformation",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK161#002/0173-1#01-AHX838#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "Property",
+              "idShort": "ManufacturerName",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-AAO677#004"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "BESTEK"
+            },
+            {
+              "modelType": "MultiLanguageProperty",
+              "idShort": "ManufacturerProductDesignation",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-AAW338#003"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "language": "en",
+                  "text": "300 W pure-sine inverter"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementList",
+          "idShort": "TechnicalPropertyAreas",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABK163#002"
+              }
+            ]
+          },
+          "typeValueListElement": "SubmodelElementCollection",
+          "semanticIdListElement": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+              }
+            ]
+          },
+          "value": [
+            {
+              "modelType": "SubmodelElementCollection",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "0173-1#02-ABL358#002/0173-1#01-AHX773#002"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "modelType": "Property",
+                  "idShort": "RatedPower",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/RatedPower"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "300"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "NominalVoltage",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/NominalVoltage"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "12"
+                },
+                {
+                  "modelType": "Property",
+                  "idShort": "AcOutputVoltage",
+                  "semanticId": {
+                    "type": "ModelReference",
+                    "keys": [
+                      {
+                        "type": "ConceptDescription",
+                        "value": "https://github.com/kusamau/rooftwin/ids/cd/AcOutputVoltage"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:double",
+                  "value": "230"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "conceptDescriptions": [
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/AcOutputVoltage",
+      "idShort": "AcOutputVoltage",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "AC output voltage"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Nominal RMS voltage of the inverter's AC output. Same concept as the DTDL element 'acOutputVoltageV' in models/dtdl."
+              }
+            ],
+            "dataType": "REAL_MEASURE",
+            "unit": "V"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/Azimuth",
+      "idShort": "Azimuth",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Azimuth"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Direction the module faces, as a compass bearing clockwise from north: 180 = due south. Same concept as the DTDL element 'azimuthDeg' in models/dtdl."
+              }
+            ],
+            "dataType": "REAL_MEASURE",
+            "unit": "°"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/Cabling",
+      "idShort": "Cabling",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Bank cabling"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "How the parallel connections are made: cable-hop, busbar or diagonal. Same concept as the DTDL element 'cabling' in models/dtdl."
+              }
+            ],
+            "dataType": "STRING"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/CellsInSeries",
+      "idShort": "CellsInSeries",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Cells in series"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Number of PV cells connected in series along one string."
+              }
+            ],
+            "dataType": "INTEGER_COUNT"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/Chemistry",
+      "idShort": "Chemistry",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Battery chemistry"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Electrochemistry of the battery cells, e.g. LEAD_ACID_FLOODED. Same concept as the DTDL element 'chemistry' in models/dtdl."
+              }
+            ],
+            "dataType": "STRING"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/Construction",
+      "idShort": "Construction",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Battery construction"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "What the battery was built for: deep-cycle (thick plates) or SLI starter (thin plates). Same concept as the DTDL element 'construction' in models/dtdl."
+              }
+            ],
+            "dataType": "STRING"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/CurrentAtMaxPower",
+      "idShort": "CurrentAtMaxPower",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Current at maximum power"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Module current at the maximum power point, at STC."
+              }
+            ],
+            "dataType": "REAL_MEASURE",
+            "unit": "A"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/HopPosition",
+      "idShort": "HopPosition",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Position on the cable hop"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Position of the battery along the post-to-post cabling, counted from the bus take-off. Same concept as the DTDL element 'hopPosition' in models/dtdl."
+              }
+            ],
+            "dataType": "STRING"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/InstalledOn",
+      "idShort": "InstalledOn",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Installation month"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Year and month in which the battery was installed in this bank. Same concept as the DTDL element 'installedOn' in models/dtdl."
+              }
+            ],
+            "dataType": "STRING"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/MaxChargeCurrent",
+      "idShort": "MaxChargeCurrent",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Maximum charge current"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Maximum battery-side charge current of the controller. Same concept as the DTDL element 'maxChargeCurrentA' in models/dtdl."
+              }
+            ],
+            "dataType": "REAL_MEASURE",
+            "unit": "A"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/MaxPvVoltage",
+      "idShort": "MaxPvVoltage",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Maximum PV voltage"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Absolute maximum PV open-circuit voltage the charge controller tolerates. Same concept as the DTDL element 'maxPvVoltageV' in models/dtdl."
+              }
+            ],
+            "dataType": "REAL_MEASURE",
+            "unit": "V"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/NominalCapacity",
+      "idShort": "NominalCapacity",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Nominal capacity"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Rated capacity at the 20-hour discharge rate (C20). Same concept as the DTDL element 'nominalCapacityAh' in models/dtdl."
+              }
+            ],
+            "dataType": "REAL_MEASURE",
+            "unit": "A·h"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/NominalVoltage",
+      "idShort": "NominalVoltage",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Nominal DC voltage"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Nominal voltage of the DC system or battery. Same concept as the DTDL element 'nominalVoltageV' in models/dtdl."
+              }
+            ],
+            "dataType": "REAL_MEASURE",
+            "unit": "V"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/OpenCircuitVoltage",
+      "idShort": "OpenCircuitVoltage",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Open-circuit voltage"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Module voltage with no load connected, at STC."
+              }
+            ],
+            "dataType": "REAL_MEASURE",
+            "unit": "V"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/PeakPower",
+      "idShort": "PeakPower",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Peak power"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Rated DC output power at Standard Test Conditions (1000 W/m², 25 °C cell, AM1.5). Same concept as the DTDL element 'wpPeak' in models/dtdl."
+              }
+            ],
+            "dataType": "REAL_MEASURE",
+            "unit": "W"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/RatedPower",
+      "idShort": "RatedPower",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Rated power"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Continuous AC output power the inverter is rated for. Same concept as the DTDL element 'ratedPowerW' in models/dtdl."
+              }
+            ],
+            "dataType": "REAL_MEASURE",
+            "unit": "W"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/ShortCircuitCurrent",
+      "idShort": "ShortCircuitCurrent",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Short-circuit current"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Module current with the terminals shorted, at STC."
+              }
+            ],
+            "dataType": "REAL_MEASURE",
+            "unit": "A"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/ShuntRating",
+      "idShort": "ShuntRating",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Shunt rating"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Current at which the measurement shunt produces its rated voltage drop. Same concept as the DTDL element 'shuntRatingA' in models/dtdl."
+              }
+            ],
+            "dataType": "REAL_MEASURE",
+            "unit": "A"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/Tilt",
+      "idShort": "Tilt",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Tilt"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Angle between the module plane and horizontal: 0 = flat, 90 = vertical. Same concept as the DTDL element 'tiltDeg' in models/dtdl."
+              }
+            ],
+            "dataType": "REAL_MEASURE",
+            "unit": "°"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/Topology",
+      "idShort": "Topology",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Bank topology"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "How the batteries of the bank are connected: parallel or series. Same concept as the DTDL element 'topology' in models/dtdl."
+              }
+            ],
+            "dataType": "STRING"
+          }
+        }
+      ]
+    },
+    {
+      "modelType": "ConceptDescription",
+      "id": "https://github.com/kusamau/rooftwin/ids/cd/VoltageAtMaxPower",
+      "idShort": "VoltageAtMaxPower",
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+              }
+            ]
+          },
+          "dataSpecificationContent": {
+            "modelType": "DataSpecificationIec61360",
+            "preferredName": [
+              {
+                "language": "en",
+                "text": "Voltage at maximum power"
+              }
+            ],
+            "definition": [
+              {
+                "language": "en",
+                "text": "Module voltage at the maximum power point, at STC."
+              }
+            ],
+            "dataType": "REAL_MEASURE",
+            "unit": "V"
+          }
+        }
+      ]
+    }
+  ]
+}

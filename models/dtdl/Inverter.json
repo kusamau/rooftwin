@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:io:github:kusamau:rooftwin:Inverter;1",
+  "@type": "Interface",
+  "displayName": "Inverter",
+  "description": "300 W pure-sine inverter on its own DC breaker. Not instrumented: no telemetry. Its on/off state tells the twin how to read voltage sags.",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "model",
+      "displayName": "Model",
+      "schema": "string"
+    },
+    {
+      "@type": ["Property", "Power"],
+      "name": "ratedPowerW",
+      "displayName": "Rated power",
+      "schema": "double",
+      "unit": "watt"
+    },
+    {
+      "@type": ["Property", "Voltage"],
+      "name": "acOutputVoltageV",
+      "displayName": "AC output voltage",
+      "schema": "double",
+      "unit": "volt"
+    },
+    {
+      "@type": "Property",
+      "name": "isOn",
+      "displayName": "Switched on",
+      "description": "Entered by hand in the UI. Writable state, not a command: the twin records what a human did; it cannot switch the inverter.",
+      "schema": "boolean",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "name": "drawsFrom",
+      "displayName": "draws from",
+      "target": "dtmi:io:github:kusamau:rooftwin:BatteryBank;1",
+      "maxMultiplicity": 1
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
+  "@id": "dtmi:io:github:kusamau:rooftwin:Battery;1",
+  "@type": "Interface",
+  "displayName": "Battery",
+  "description": "One 12 V battery inside the bank. Used only as a Component of BatteryBank. Nothing measures it directly; its telemetry is inferred (Lesson 6).",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "slot",
+      "displayName": "Slot",
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "string",
+        "enumValues": [
+          { "name": "a", "enumValue": "a" },
+          { "name": "b", "enumValue": "b" },
+          { "name": "c", "enumValue": "c" }
+        ]
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "model",
+      "displayName": "Model",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "chemistry",
+      "displayName": "Chemistry",
+      "description": "Electrochemistry. All three batteries here are flooded lead-acid.",
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "string",
+        "enumValues": [
+          { "name": "leadAcidFlooded", "enumValue": "LEAD_ACID_FLOODED" },
+          { "name": "leadAcidEfb", "enumValue": "LEAD_ACID_EFB" },
+          { "name": "leadAcidAgm", "enumValue": "LEAD_ACID_AGM" },
+          { "name": "leadAcidGel", "enumValue": "LEAD_ACID_GEL" },
+          { "name": "lifepo4", "enumValue": "LIFEPO4" }
+        ]
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "construction",
+      "displayName": "Construction",
+      "description": "What the battery was built for. Deep-cycle (thick plates) vs SLI starter (thin plates, high cranking current). Separate from chemistry: both are flooded lead-acid.",
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "string",
+        "enumValues": [
+          { "name": "deepCycle", "enumValue": "deep-cycle" },
+          { "name": "sli", "enumValue": "SLI" }
+        ]
+      }
+    },
+    {
+      "@type": ["Property", "ElectricCharge"],
+      "name": "nominalCapacityAh",
+      "displayName": "Nominal capacity (C20)",
+      "schema": "double",
+      "unit": "ampereHour"
+    },
+    {
+      "@type": "Property",
+      "name": "installedOn",
+      "displayName": "Installed on",
+      "schema": "date"
+    },
+    {
+      "@type": "Property",
+      "name": "hopPosition",
+      "displayName": "Position on the cable hop",
+      "description": "Where the battery sits on the cable hop, counted from the bus take-off. Sets its share of series cable resistance (Lesson 5).",
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "string",
+        "enumValues": [
+          { "name": "closestToBus", "enumValue": "closest-to-bus" },
+          { "name": "middle", "enumValue": "middle" },
+          { "name": "farthestFromBus", "enumValue": "farthest-from-bus" }
+        ]
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "relativeHealthDelta",
+      "displayName": "Relative health delta",
+      "description": "Health relative to the bank average: negative means weaker than its siblings. Inferred from Lesson 6.",
+      "schema": "double"
+    },
+    {
+      "@type": ["Telemetry", "Resistance"],
+      "name": "estimatedEsrMilliOhm",
+      "displayName": "Estimated internal resistance",
+      "description": "Inferred from voltage sag on inverter switch-on (Lessons 5-6).",
+      "schema": "double",
+      "unit": "milliohm"
+    }
+  ]
+}
